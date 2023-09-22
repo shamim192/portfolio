@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutController;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HeroController;
@@ -53,4 +54,6 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
    Route::resource('hero',HeroController::class);
    Route::resource('type-title', TyperTitleController::class);
    Route::resource('services',ServiceController::class);
+   Route::get('resume/download',[AboutController::class,'resumeDownload'])->name('resume.download');
+   Route::resource('about',AboutController::class);
 });
