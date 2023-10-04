@@ -74,6 +74,79 @@
                         class="far fa-square"></i><span>About</span></a>
             </li>
 
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
+                    <span>Portfolio</span></a>
+                <ul class="dropdown-menu" style="display: none;">
+                    <li><a class="nav-link" href="{{ route('admin.category.index') }}">Category </a></li>
+                    <li><a class="nav-link" href="{{ route('admin.portfolio-item.index') }}">Portfolio Item </a></li>
+                    <li><a class="nav-link" href="{{ route('admin.portfolio-section-setting.index') }}">Section Setting </a></li>
+
+
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
+                    <span>Skill</span></a>
+                <ul class="dropdown-menu" style="display: none;">
+                    <li><a class="nav-link" href="{{ route('admin.skill-items.index') }}">Skill Items </a></li>
+                    <li><a class="nav-link" href="{{ route('admin.skill-setting.index') }}"> Skill Setting </a></li>
+                    
+                    
+                </ul>
+            </li>
+
+            <li>
+                <a class="nav-link" href="{{ route('admin.experience.index') }}"><i
+                        class="far fa-square"></i><span>Experience</span></a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
+                    <span>Feedback</span></a>
+                <ul class="dropdown-menu" style="display: none;">
+                    <li><a class="nav-link" href="{{ route('admin.feedback.index') }}"> Feedbacks </a></li>
+                    <li><a class="nav-link" href="{{ route('admin.feedback-setting.index') }}"> Feedback Setting </a></li>
+                    
+                    
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
+                    <span>Blog</span></a>
+                <ul class="dropdown-menu" style="display: none;">
+                    <li><a class="nav-link" href="{{ route('admin.blog-category.index') }}"> Category </a></li>
+                    <li><a class="nav-link" href="{{ route('admin.blog-list.index') }}"> Blog List </a></li>
+                    <li><a class="nav-link" href="{{ route('admin.blog-setting.index') }}"> Blog Setting </a></li>
+                    
+                    
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
+                    <span>Contact</span></a>
+                <ul class="dropdown-menu" style="display: none;">
+                    <li><a class="nav-link" href="{{ route('admin.contact-setting.index') }}"> Contact Setting </a></li>
+                                        
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
+                    <span>Footer</span></a>
+                <ul class="dropdown-menu" style="display: none;">
+                    <li><a class="nav-link" href="{{ route('admin.social-link.index') }}"> Social Link </a></li>
+                    <li><a class="nav-link" href="{{ route('admin.footer-information.index') }}"> Footer Information </a></li>
+                    <li><a class="nav-link" href="{{ route('admin.contact-info.index') }}"> Contact Info </a></li>
+                    <li><a class="nav-link" href="{{ route('admin.useful-link.index') }}"> Useful Links </a></li>
+                    <li><a class="nav-link" href="{{ route('admin.help-link.index') }}"> Help Links </a></li>
+                                        
+                </ul>
+            </li>
+
+
         </ul>
     </aside>
 </div>
