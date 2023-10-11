@@ -18,9 +18,12 @@ use App\Http\Controllers\Admin\ExperienceController;
 use App\Http\Controllers\Admin\FeedbackController;
 use App\Http\Controllers\Admin\FeedbackSectionSettingController;
 use App\Http\Controllers\Admin\FooterInformationController;
+use App\Http\Controllers\Admin\GeneralSettingController;
 use App\Http\Controllers\Admin\HelpLinkController;
 use App\Http\Controllers\Admin\PortfolioItemController;
 use App\Http\Controllers\Admin\PortfolioSectionSettingController;
+use App\Http\Controllers\Admin\SeoSettingController;
+use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SkillItemController;
 use App\Http\Controllers\Admin\SkillSectionSettingController;
 use App\Http\Controllers\Admin\SocialLinkController;
@@ -117,4 +120,13 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
    Route::resource('contact-info', ContactInfoController::class);
    Route::resource('useful-link', UsefulLinkController::class);
    Route::resource('help-link', HelpLinkController::class);
+
+   // setting section
+   Route::get('settings', SettingController::class)->name('settings.index');
+
+   // General Setting
+   Route::resource('general-setting', GeneralSettingController::class);
+
+   // SEO Setting
+   Route::resource('seo-setting', SeoSettingController::class);
 });

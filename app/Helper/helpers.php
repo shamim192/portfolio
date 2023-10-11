@@ -47,3 +47,16 @@ function deleteFileIfExist($filePath){
     
         return $colors[$index % count($colors)];
     }
+
+
+    // Set Sidebar Active
+
+    function setSidebarActive($route){
+        if(is_array($route)){
+            foreach($route as $r){
+                if(request()->routeIs($r)){
+                    return 'active';
+                }
+            }
+        }
+    }

@@ -1,3 +1,8 @@
+@php
+  $generalSetting =\App\Models\GeneralSetting::first();
+  $seo =\App\Models\SeoSetting::first();    
+@endphp
+
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -6,9 +11,10 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="csrf-token" content="{{ csrf_token() }}" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<title>Shamim | Personal Portfolio </title>
-	<link rel="shortcut icon" type="image/ico" href="images/favicon.png" />
+	<meta name="description" content="{{@$seo->description}}">
+	<meta name="description" content="{{@$seo->keywords}}">
+	<title>{{@$seo->title}} </title>
+	<link rel="shortcut icon" type="image/ico" href="{{asset($generalSetting->favicon)}}" />
 	<link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/assets/css/normalize.css')}}">
 	<link rel="stylesheet" href="{{asset('frontend/assets/css/style-plugin-collection.css')}}">
